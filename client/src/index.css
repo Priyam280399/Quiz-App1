@@ -1,0 +1,173 @@
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set up default font and base styles */
+body {
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  background-color: #f5f5f5;
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* A11y: Ensure focus outlines are visible */
+:focus {
+  outline: 2px solid #007BFF;
+}
+
+/* Layout: Full height for flexbox-based layout */
+html, body, #root {
+  height: 100%;
+}
+
+/* Styling for common elements */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Button styles */
+button {
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Form elements */
+input, select, textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #007BFF;
+}
+
+/* Utility classes */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container {
+      width: 100%;
+      padding: 10px;
+  }
+  
+  button {
+      width: 100%;
+  }
+}
+
+/* Specific styling for your quiz application */
+
+/* Tag selection grid */
+.tag-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tag {
+  background-color: #e0e0e0;
+  padding: 10px;
+  text-align: center;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.tag.selected {
+  background-color: #007BFF;
+  color: white;
+}
+
+/* Quiz question and answer styles */
+.question {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.answer-option {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.answer-option:hover {
+  background-color: #f0f0f0;
+}
+
+.answer-option.selected {
+  background-color: #007BFF;
+  color: white;
+  border-color: #0056b3;
+}
+
+/* Timer styling */
+.timer {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #d9534f;
+}
+
+/* Score display */
+.score {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #28a745;
+  margin-top: 20px;
+  text-align: center;
+}
